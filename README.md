@@ -10,30 +10,30 @@ http:/localhost:8080 с базовыми параметрами логина air
 ####  При создании volumes нижеуказанный Волюм закомментирован, таблица rates_BTC_new в постгрес создавалась по результату отработки DAGa calc_rates2.py
 volumes:
      
-      - ./postgres/init_scripts/task1.sql:/docker-entrypoint-initdb.d/init.sql
+      #- ./postgres/init_scripts/task1.sql:/docker-entrypoint-initdb.d/init.sql
 
 #### Получившиеся результаты размещены в папке 'Результаты работы DAGa'
 
-##Настройки подключения my_db_conn в Airflow:
+## Настройки подключения my_db_conn в Airflow:
 
-####connection_id = 'my_db_conn'
-####connection Type = 'Postgres'
-####host = 'host.docker.internal'
-####schema = 'test'
-####login = 'postgres'
-####password = 'password'
-####port = '5430'
+#### connection_id = 'my_db_conn'
+#### connection Type = 'Postgres'
+#### host = 'host.docker.internal'
+#### schema = 'test'
+#### login = 'postgres'
+#### password = 'password'
+#### port = '5430'
 
-##Настройки подключения в DBeaver
+## Настройки подключения в DBeaver
 
-####хост - 'localhost'
-####База данных - 'test'
-####Пользователь - 'postgres'
-####Пароль - 'password'
+#### хост - 'localhost'
+#### База данных - 'test'
+#### Пользователь - 'postgres'
+#### Пароль - 'password'
 
-##Cодержание переменной variables
+## Cодержание переменной variables
 
-####variables = {"table_name": "rates_BTC_new",
+#### variables = {"table_name": "rates_BTC_new",
 ####                                "RUB": "RUB",
 ####                                "USD": "USD",                              
 ####                                "BTC": "BTC", 
